@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-KTP Berhasil Dibuat - E-KTP Generator Indonesia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png ">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png ">
+
+    <!-- Meta SEO -->
+    <meta name="description" content="E-KTP berhasil dibuat. Unduh hasilnya secara gratis untuk tujuan edukasi.">
+    <meta name="keywords" content="E-KTP, KTP Online, Download E-KTP, ID Card Generator">
+    <meta name="author" content="ZenmaTH">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons @1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/modern-style.css"> <!-- Ganti dengan CSS baru jika ada -->
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="bi bi-person-badge me-2"></i>E-KTP Generator
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="bi bi-person-badge me-2 fs-4"></i>
+                <span class="fw-bold">E-KTP Generator</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="bi bi-house-door me-1"></i>Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/YoshCasaster" target="_blank"><i class="bi bi-github me-1"></i>GitHub</a>
-                    </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/"><i class="bi bi-house-door me-1"></i>Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/YoshCasaster " target="_blank"><i class="bi bi-github me-1"></i>GitHub</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <!-- Main Content -->
+    <main class="container py-5 flex-grow-1">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <h2 class="text-center text-white mb-0"><i class="bi bi-check-circle me-2"></i>E-KTP Berhasil Dibuat</h2>
+                <div class="card border-0 shadow rounded-4 overflow-hidden">
+                    <div class="card-header text-white text-center bg-gradient-primary">
+                        <h2 class="mb-0"><i class="bi bi-check-circle me-2"></i>E-KTP Berhasil Dibuat</h2>
                     </div>
-                    <div class="card-body text-center">
-                        <div class="mb-4">
-                            <div class="position-relative">
-                                <img src="<%= imgPath %>" alt="E-KTP" class="img-fluid border" style="max-width: 100%;">
-                                <div class="position-absolute bottom-0 end-0 m-3">
-                                    <span class="badge bg-primary p-2"><i class="bi bi-info-circle me-1"></i>Hanya untuk Edukasi</span>
-                                </div>
-                            </div>
+                    <div class="card-body p-4 text-center">
+                        <!-- E-KTP Image -->
+                        <div class="position-relative mb-4">
+                            <img src="<%= imgPath %>" alt="E-KTP" class="img-fluid rounded shadow-sm">
+                            <span class="badge bg-primary position-absolute top-0 start-50 translate-middle mt-2 px-3 py-2">
+                                <i class="bi bi-info-circle me-1"></i>Hanya Edukasi
+                            </span>
                         </div>
-                        <div class="mb-4 d-flex flex-column flex-md-row justify-content-center gap-2">
-                            <a href="<%= imgPath %>" download="ektp_<%= data.nama.replace(/\s+/g, '_').toLowerCase() %>.png" class="btn btn-primary">
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                            <a href="<%= imgPath %>" download="ektp_<%= data.nama.replace(/\s+/g, '_').toLowerCase() %>.png" class="btn btn-primary btn-lg px-4">
                                 <i class="bi bi-download me-2"></i>Download E-KTP
                             </a>
-                            <a href="/" class="btn btn-secondary">
-                                <i class="bi bi-plus-circle me-2"></i>Buat E-KTP Baru
+                            <a href="/" class="btn btn-outline-secondary btn-lg px-4">
+                                <i class="bi bi-plus-circle me-2"></i>Buat Baru
                             </a>
                         </div>
-                        <div class="alert alert-warning">
+
+                        <!-- Warning Alert -->
+                        <div class="alert alert-warning alert-dismissible fade show text-start" role="alert">
                             <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                            <strong>Catatan:</strong> E-KTP ini dibuat hanya untuk tujuan edukasi dan tidak memiliki nilai hukum. Dilarang menggunakan untuk tindakan penipuan atau melanggar hukum.
+                            <strong>Catatan Penting:</strong> Dokumen ini hanya untuk tujuan edukasi. Tidak memiliki status hukum resmi.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <footer class="text-center py-3 mt-5">
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white mt-auto">
         <div class="container">
-            <p class="mb-0">Created by <a href="https://github.com/YoshCasaster" target="_blank">ZenmaTH</a></p>
+            <p class="mb-0">Created by <a href="https://github.com/YoshCasaster " target="_blank" class="text-decoration-none text-primary fw-medium">ZenmaTH</a></p>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap @5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
