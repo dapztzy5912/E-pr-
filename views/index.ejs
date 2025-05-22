@@ -6,8 +6,8 @@
     <title>E-KTP Generator Indonesia</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png ">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png ">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/YoshCasaster/store_db/refs/heads/main/Template.png">
 
     <!-- SEO Meta -->
     <meta name="description" content="Buat E-KTP Indonesia secara otomatis dan mudah secara online.">
@@ -15,108 +15,179 @@
     <meta name="author" content="ZenmaTH">
 
     <!-- CSS Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons @1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/style.css"> <!-- Updated CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="bg-light">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-sm">
+<body class="d-flex flex-column min-vh-100">
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <i class="bi bi-person-badge me-2 fs-4"></i>
                 <span class="fw-bold">E-KTP Generator</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="/"><i class="bi bi-house-door me-1"></i>Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/YoshCasaster " target="_blank"><i class="bi bi-github me-1"></i>GitHub</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <i class="bi bi-house-door me-1"></i>Beranda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/YoshCasaster" target="_blank">
+                            <i class="bi bi-github me-1"></i>GitHub
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <div class="container-fluid" style="margin-top: 80px;">
+        <div class="row justify-content-center py-5">
+            <div class="col-12 text-center mb-4">
+                <h1 class="display-4 fw-bold text-gradient mb-3">
+                    <i class="bi bi-person-badge me-3"></i>
+                    E-KTP Generator Indonesia
+                </h1>
+                <p class="lead text-muted mb-4">Buat E-KTP untuk keperluan edukasi dengan mudah dan cepat</p>
+                <div class="d-flex justify-content-center gap-2 mb-4">
+                    <span class="badge bg-success">
+                        <i class="bi bi-shield-check me-1"></i>Aman
+                    </span>
+                    <span class="badge bg-info">
+                        <i class="bi bi-lightning me-1"></i>Cepat
+                    </span>
+                    <span class="badge bg-warning">
+                        <i class="bi bi-book me-1"></i>Edukasi
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
-    <main class="container py-5">
+    <main class="container py-4 flex-grow-1">
         <div class="row justify-content-center">
-            <div class="col-md-11 col-lg-10">
-                <div class="card border-0 shadow rounded-4 overflow-hidden">
-                    <div class="card-header text-white text-center bg-gradient-primary">
-                        <h2 class="mb-1">E-KTP Generator Indonesia</h2>
-                        <p class="text-white-50 mb-0">Buat E-KTP untuk keperluan edukasi</p>
+            <div class="col-12 col-xl-11">
+                <div class="card-modern">
+                    <div class="card-header-modern">
+                        <h2 class="mb-2">
+                            <i class="bi bi-file-earmark-person me-2"></i>
+                            Form Generator E-KTP
+                        </h2>
+                        <p class="mb-0">Isi semua data dengan benar untuk hasil yang optimal</p>
                     </div>
-                    <div class="card-body p-4">
+                    <div class="card-body p-4 p-md-5">
                         <form action="/generate" method="POST" enctype="multipart/form-data" id="ektp-form" novalidate>
-                            <div class="row g-3">
+                            <div class="row g-4">
+                                <!-- Personal Information Section -->
+                                <div class="col-12">
+                                    <h4 class="text-gradient fw-bold mb-4">
+                                        <i class="bi bi-person-circle me-2"></i>
+                                        Informasi Personal
+                                    </h4>
+                                </div>
+
                                 <!-- Left Column -->
                                 <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="provinsi" class="form-label"><i class="bi bi-geo-alt me-1"></i>Provinsi</label>
-                                        <input type="text" class="form-control form-control-lg" id="provinsi" name="provinsi" required>
+                                    <div class="mb-4">
+                                        <label for="provinsi" class="form-label-modern">
+                                            <i class="bi bi-geo-alt"></i>Provinsi
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="provinsi" name="provinsi" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="kota" class="form-label"><i class="bi bi-building me-1"></i>Kota</label>
-                                        <input type="text" class="form-control form-control-lg" id="kota" name="kota" required>
+                                    <div class="mb-4">
+                                        <label for="kota" class="form-label-modern">
+                                            <i class="bi bi-building"></i>Kota/Kabupaten
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="kota" name="kota" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="nik" class="form-label"><i class="bi bi-credit-card-2-front me-1"></i>NIK</label>
-                                        <input type="text" class="form-control form-control-lg" id="nik" name="nik" maxlength="16" required>
-                                        <small class="form-text text-muted">Harus 16 digit angka</small>
+                                    <div class="mb-4">
+                                        <label for="nik" class="form-label-modern">
+                                            <i class="bi bi-credit-card-2-front"></i>NIK
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="nik" name="nik" maxlength="16" required>
+                                        <small class="text-muted mt-2 d-block">
+                                            <i class="bi bi-info-circle me-1"></i>Harus 16 digit angka
+                                        </small>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="nama" class="form-label"><i class="bi bi-person me-1"></i>Nama Lengkap</label>
-                                        <input type="text" class="form-control form-control-lg" id="nama" name="nama" required>
+                                    <div class="mb-4">
+                                        <label for="nama" class="form-label-modern">
+                                            <i class="bi bi-person"></i>Nama Lengkap
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="nama" name="nama" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="ttl" class="form-label"><i class="bi bi-calendar-event me-1"></i>Tempat, Tanggal Lahir</label>
-                                        <input type="text" class="form-control form-control-lg" id="ttl" name="ttl" placeholder="Jakarta, 01 Januari 2000" required>
+                                    <div class="mb-4">
+                                        <label for="ttl" class="form-label-modern">
+                                            <i class="bi bi-calendar-event"></i>Tempat, Tanggal Lahir
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="ttl" name="ttl" 
+                                               placeholder="Jakarta, 01 Januari 2000" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="jenis_kelamin" class="form-label"><i class="bi bi-gender-ambiguous me-1"></i>Jenis Kelamin</label>
-                                        <select class="form-select form-select-lg" id="jenis_kelamin" name="jenis_kelamin" required>
-                                            <option value="">Pilih...</option>
+                                    <div class="mb-4">
+                                        <label for="jenis_kelamin" class="form-label-modern">
+                                            <i class="bi bi-gender-ambiguous"></i>Jenis Kelamin
+                                        </label>
+                                        <select class="form-select-modern" id="jenis_kelamin" name="jenis_kelamin" required>
+                                            <option value="">Pilih jenis kelamin...</option>
                                             <option value="laki-laki">Laki-laki</option>
                                             <option value="perempuan">Perempuan</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="golongan_darah" class="form-label"><i class="bi bi-droplet me-1"></i>Golongan Darah</label>
-                                        <select class="form-select form-select-lg" id="golongan_darah" name="golongan_darah">
-                                            <option value="">Pilih...</option>
+                                    <div class="mb-4">
+                                        <label for="golongan_darah" class="form-label-modern">
+                                            <i class="bi bi-droplet"></i>Golongan Darah
+                                        </label>
+                                        <select class="form-select-modern" id="golongan_darah" name="golongan_darah">
+                                            <option value="">Pilih golongan darah...</option>
                                             <option value="A">A</option>
                                             <option value="B">B</option>
                                             <option value="AB">AB</option>
                                             <option value="O">O</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="alamat" class="form-label"><i class="bi bi-house me-1"></i>Alamat</label>
-                                        <input type="text" class="form-control form-control-lg" id="alamat" name="alamat" required>
+                                    <div class="mb-4">
+                                        <label for="alamat" class="form-label-modern">
+                                            <i class="bi bi-house"></i>Alamat
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="alamat" name="alamat" required>
                                     </div>
                                 </div>
 
                                 <!-- Right Column -->
                                 <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="rt_rw" class="form-label"><i class="bi bi-signpost-split me-1"></i>RT/RW</label>
-                                        <input type="text" class="form-control form-control-lg" id="rt_rw" name="rt_rw" placeholder="000/000" required>
+                                    <div class="mb-4">
+                                        <label for="rt_rw" class="form-label-modern">
+                                            <i class="bi bi-signpost-split"></i>RT/RW
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="rt_rw" name="rt_rw" 
+                                               placeholder="000/000" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="kel_desa" class="form-label"><i class="bi bi-geo me-1"></i>Kelurahan/Desa</label>
-                                        <input type="text" class="form-control form-control-lg" id="kel_desa" name="kel_desa" required>
+                                    <div class="mb-4">
+                                        <label for="kel_desa" class="form-label-modern">
+                                            <i class="bi bi-geo"></i>Kelurahan/Desa
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="kel_desa" name="kel_desa" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="kecamatan" class="form-label"><i class="bi bi-pin-map me-1"></i>Kecamatan</label>
-                                        <input type="text" class="form-control form-control-lg" id="kecamatan" name="kecamatan" required>
+                                    <div class="mb-4">
+                                        <label for="kecamatan" class="form-label-modern">
+                                            <i class="bi bi-pin-map"></i>Kecamatan
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="kecamatan" name="kecamatan" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="agama" class="form-label"><i class="bi bi-book me-1"></i>Agama</label>
-                                        <select class="form-select form-select-lg" id="agama" name="agama" required>
-                                            <option value="">Pilih...</option>
+                                    <div class="mb-4">
+                                        <label for="agama" class="form-label-modern">
+                                            <i class="bi bi-book"></i>Agama
+                                        </label>
+                                        <select class="form-select-modern" id="agama" name="agama" required>
+                                            <option value="">Pilih agama...</option>
                                             <option value="islam">Islam</option>
                                             <option value="kristen">Kristen</option>
                                             <option value="katolik">Katolik</option>
@@ -125,76 +196,147 @@
                                             <option value="konghucu">Konghucu</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="status" class="form-label"><i class="bi bi-heart me-1"></i>Status Perkawinan</label>
-                                        <select class="form-select form-select-lg" id="status" name="status" required>
-                                            <option value="">Pilih...</option>
+                                    <div class="mb-4">
+                                        <label for="status" class="form-label-modern">
+                                            <i class="bi bi-heart"></i>Status Perkawinan
+                                        </label>
+                                        <select class="form-select-modern" id="status" name="status" required>
+                                            <option value="">Pilih status...</option>
                                             <option value="belum menikah">Belum Menikah</option>
                                             <option value="menikah">Menikah</option>
                                             <option value="cerai hidup">Cerai Hidup</option>
                                             <option value="cerai mati">Cerai Mati</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="pekerjaan" class="form-label"><i class="bi bi-briefcase me-1"></i>Pekerjaan</label>
-                                        <input type="text" class="form-control form-control-lg" id="pekerjaan" name="pekerjaan" required>
+                                    <div class="mb-4">
+                                        <label for="pekerjaan" class="form-label-modern">
+                                            <i class="bi bi-briefcase"></i>Pekerjaan
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="pekerjaan" name="pekerjaan" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="kewarganegaraan" class="form-label"><i class="bi bi-flag me-1"></i>Kewarganegaraan</label>
-                                        <select class="form-select form-select-lg" id="kewarganegaraan" name="kewarganegaraan" required>
+                                    <div class="mb-4">
+                                        <label for="kewarganegaraan" class="form-label-modern">
+                                            <i class="bi bi-flag"></i>Kewarganegaraan
+                                        </label>
+                                        <select class="form-select-modern" id="kewarganegaraan" name="kewarganegaraan" required>
                                             <option value="wni">WNI</option>
                                             <option value="wna">WNA</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="masa_berlaku" class="form-label"><i class="bi bi-clock-history me-1"></i>Masa Berlaku</label>
-                                        <input type="text" class="form-control form-control-lg" id="masa_berlaku" name="masa_berlaku" value="SEUMUR HIDUP" readonly>
+                                    <div class="mb-4">
+                                        <label for="masa_berlaku" class="form-label-modern">
+                                            <i class="bi bi-clock-history"></i>Masa Berlaku
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="masa_berlaku" 
+                                               name="masa_berlaku" value="SEUMUR HIDUP" readonly>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="terbuat" class="form-label"><i class="bi bi-calendar-check me-1"></i>Tanggal Pembuatan</label>
-                                        <input type="text" class="form-control form-control-lg" id="terbuat" name="terbuat"
+                                    <div class="mb-4">
+                                        <label for="terbuat" class="form-label-modern">
+                                            <i class="bi bi-calendar-check"></i>Tanggal Pembuatan
+                                        </label>
+                                        <input type="text" class="form-control-modern" id="terbuat" name="terbuat"
                                                value="<%= new Date().toLocaleDateString('id-ID') %>" readonly>
                                     </div>
                                 </div>
 
                                 <!-- Upload Section -->
+                                <div class="col-12">
+                                    <h4 class="text-gradient fw-bold mb-4 mt-4">
+                                        <i class="bi bi-cloud-upload me-2"></i>
+                                        Upload Foto & Tanda Tangan
+                                    </h4>
+                                </div>
+
                                 <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="pas_photo" class="form-label"><i class="bi bi-camera me-1"></i>Pas Foto</label>
-                                        <input type="file" class="form-control form-control-lg" id="pas_photo" name="pas_photo" accept="image/*" required>
-                                        <small class="text-muted mt-1 d-block">Ukuran foto: 3x4</small>
-                                        <div id="photo-preview-container" class="mt-2"></div>
+                                    <div class="mb-4">
+                                        <label for="pas_photo" class="form-label-modern">
+                                            <i class="bi bi-camera"></i>Pas Foto
+                                        </label>
+                                        <input type="file" class="form-control-modern" id="pas_photo" name="pas_photo" 
+                                               accept="image/*" required>
+                                        <small class="text-muted mt-2 d-block">
+                                            <i class="bi bi-info-circle me-1"></i>Ukuran foto: 3x4, format JPG/PNG
+                                        </small>
+                                        <div id="photo-preview-container" class="mt-3"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="tanda_tangan" class="form-label"><i class="bi bi-pen me-1"></i>Tanda Tangan</label>
-                                        <canvas id="signatureCanvas" width="400" height="150" class="w-100 border rounded bg-white"></canvas>
+                                    <div class="mb-4">
+                                        <label for="tanda_tangan" class="form-label-modern">
+                                            <i class="bi bi-pen"></i>Tanda Tangan
+                                        </label>
+                                        <div class="signature-container">
+                                            <canvas id="signatureCanvas" width="400" height="200"></canvas>
+                                        </div>
                                         <input type="hidden" id="signature_data" name="tanda_tangan">
-                                        <div class="mt-2 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" id="clearSignature"><i class="bi bi-eraser me-1"></i>Hapus</button>
-                                            <small class="text-muted">Geser untuk membuat tanda tangan</small>
+                                        <div class="mt-3 d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn btn-outline-modern btn-sm" id="clearSignature">
+                                                <i class="bi bi-eraser me-1"></i>Hapus Tanda Tangan
+                                            </button>
+                                            <small class="text-muted">
+                                                <i class="bi bi-cursor me-1"></i>Klik dan geser untuk menandatangani
+                                            </small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Submit Button -->
-                            <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-lg btn-primary px-5">
-                                    <i class="bi bi-file-earmark-person me-2"></i>Generate E-KTP
+                            <div class="text-center mt-5 pt-4 border-top">
+                                <button type="submit" class="btn-modern btn-primary-modern btn-lg px-5 py-3">
+                                    <i class="bi bi-file-earmark-person me-2"></i>
+                                    Generate E-KTP Sekarang
                                 </button>
+                                <p class="text-muted mt-3 mb-0">
+                                    <i class="bi bi-shield-check me-1"></i>
+                                    Data Anda aman dan hanya digunakan untuk generate E-KTP
+                                </p>
                             </div>
 
                             <!-- Loading Indicator -->
-                            <div class="loading mt-3 text-center d-none" id="loadingIndicator">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <p class="mt-2">Sedang membuat E-KTP Anda...</p>
+                            <div class="loading-modern mt-4 d-none" id="loadingIndicator">
+                                <div class="spinner-modern"></div>
+                                <p class="text-muted mb-0">Sedang membuat E-KTP Anda, mohon tunggu...</p>
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="card-modern hover-lift h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="text-primary mb-3">
+                                    <i class="bi bi-shield-check" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">100% Aman</h5>
+                                <p class="text-muted mb-0">Data Anda tidak disimpan di server dan hanya digunakan untuk generate E-KTP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card-modern hover-lift h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="text-success mb-3">
+                                    <i class="bi bi-lightning-charge" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">Super Cepat</h5>
+                                <p class="text-muted mb-0">Proses pembuatan E-KTP hanya membutuhkan waktu beberapa detik</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card-modern hover-lift h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="text-warning mb-3">
+                                    <i class="bi bi-mortarboard" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">Tujuan Edukasi</h5>
+                                <p class="text-muted mb-0">E-KTP yang dihasilkan hanya untuk keperluan pembelajaran dan edukasi</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,14 +344,95 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-4 bg-dark text-white mt-auto">
+    <footer class="footer-modern text-center">
         <div class="container">
-            <p class="mb-0">Created by <a href="https://github.com/YoshCasaster " target="_blank" class="text-decoration-none text-primary">ZenmaTH</a></p>
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-2">
+                        <i class="bi bi-code-slash me-1"></i>
+                        Created with <i class="bi bi-heart-fill text-danger mx-1"></i> by 
+                        <a href="https://github.com/YoshCasaster" target="_blank" class="fw-bold">ZenmaTH</a>
+                    </p>
+                    <p class="mb-0 small opacity-75">
+                        © 2024 E-KTP Generator Indonesia. Untuk tujuan edukasi.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary-modern position-fixed bottom-0 end-0 m-4 rounded-circle d-none" 
+            style="width: 50px; height: 50px; z-index: 1000;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!-- JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap @5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/script.js"></script>
+    
+    <!-- Additional Modern JS -->
+    <script>
+        // Back to top functionality
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('d-none');
+            } else {
+                backToTopBtn.classList.add('d-none');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form validation and enhancement
+        document.getElementById('ektp-form').addEventListener('submit', function(e) {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (this.checkValidity()) {
+                loadingIndicator.classList.remove('d-none');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Memproses...';
+            }
+        });
+
+        // Photo preview
+        document.getElementById('pas_photo').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const previewContainer = document.getElementById('photo-preview-container');
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewContainer.innerHTML = `
+                        <div class="mt-3">
+                            <img src="${e.target.result}" class="photo-preview" alt="Preview Foto">
+                            <p class="small text-muted mt-2 mb-0">
+                                <i class="bi bi-check-circle text-success me-1"></i>
+                                Foto berhasil dipilih
+                            </p>
+                        </div>
+                    `;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.innerHTML = '';
+            }
+        });
+
+        // Enhanced input animations
+        document.querySelectorAll('.form-control-modern, .form-select-modern').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+            });
+        });
+    </script>
 </body>
 </html>
